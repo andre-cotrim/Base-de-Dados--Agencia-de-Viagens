@@ -41,8 +41,8 @@ SELECT Data_de_Início, Data_De_Fim DATEDIFF(DD, Data_de_Início, Data_de_Fim) a
 
 CREATE TABLE PAGAMENTO(
     ID_Transação TEXT PRIMARY KEY,
-    Data_de_Pagamento DATE NOT NULL,
-    Valor_Pago INT NOT NULL,
+    Data_de_Pagamento DATE,
+    Valor_Pago INT,
     ESTADO_DE_PAGAMENTO BOOLEAN NOT NULL
 );
 --quartos disponiveis?
