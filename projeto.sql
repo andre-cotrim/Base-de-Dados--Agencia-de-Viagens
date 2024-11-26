@@ -10,7 +10,7 @@ SELECT Número_CC, Data_de_Nascimento, DATEDIFF(YY, Data_de_Nascimento, GETDATE(
 --restrigir text
 --perguntar stor como fazer IDADE
 --confirmar booleans
-
+--unique
 CREATE TABLE CLIENTE(
     Número_CC INT REFERENCES PASSAGEIRO(NÚMERO_CC) PRIMARY KEY,
     IBAN TEXT,
