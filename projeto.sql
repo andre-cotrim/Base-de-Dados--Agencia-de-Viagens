@@ -196,5 +196,7 @@ CREATE TABLE PAGAMENTO(
     Data_de_Pagamento DATE,
     Valor_Pago INT CHECK (Valor_Pago>0),
     ESTADO_DE_PAGAMENTO BOOLEAN NOT NULL
+    Número_CC TEXT REFERENCES CLIENTE(NÚMERO_CC),
+    ID_da_Reserva TEXT REFERENCES RESERVA(ID_da_Reserva)
 );
 
