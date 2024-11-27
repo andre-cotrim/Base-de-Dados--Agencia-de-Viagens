@@ -14,6 +14,8 @@ SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascim
 --constrain
 --nulls
 --drop table
+--idade check passageiro cliente e empo espera
+--fazer restricoes entre classes
 
 CREATE TABLE CLIENTE(
     Numero_CC INT PRIMARY KEY,
@@ -34,19 +36,16 @@ CREATE TABLE AVIAO(
     Ano_de_Produção INT NOT NULL
 );
 
-
 CREATE TABLE RESERVA(
     ID_da_Reserva INT PRIMARY KEY,
     Data_de_Inico DATE NOT NULL,
-    Data_de_Fim DATE NOT NULL,
+    Data_de_Fim DATE NOT NULL CHECK (Data_de_Fim>Data_de_Inicio),
     Bagagem INT,
     ID_da_Rota INT NOT NULL,
     FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota)
 );
-
 SELECT ID_da_Reserva, Data_de_Inicio,Data_de_Fim, (JULIANDAY(Data_de_Fim)-JULIANDAY(Data_de_Inicio)) AS DAYS FROM RESERVA;
 
---quartos disponiveis?
 CREATE TABLE ALOJAMENTO(
     Endereço TEXT PRIMARY KEY,
     Check-in DATE NOT NULL,
@@ -169,8 +168,8 @@ CREATE TABLE ROTA(){
     FOREIGN KEY (Aeroporto_Chegada) REFERENCES AEROPORTO(Nome_do_Aeroporto),
     FOREIGN KEY (Aeroporto_Partida) REFERENCES AEROPORTO(Nome_do_Aeroporto)
 };
---FALTA CALCULAR O TEMPO DE ESPERA NA ROTA
---seria SELECT (STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 AS Tempo_de_Espera FROM ROTA;
+SELECT (STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 AS Tempo_de_Espera FROM ROTA;
+CHECK(Tempo_de_Espera>0)
 
 CREATE TABLE ORIENTAÇÃO(){
     Programa TEXT,
@@ -203,9 +202,15 @@ CREATE TABLE PAGAMENTO(
     Data_de_Pagamento DATE,
     Valor_Pago INT CHECK (Valor_Pago>0),
     ESTADO_DE_PAGAMENTO BOOLEAN NOT NULL
-    Número_CC TEXT,
+    Numero_CC TEXT,
     ID_da_Reserva TEXT,
-    FOREIGN KEY (Numero_CC) REFERENCES CLIENTE(NÚMERO_CC),
+    FOREIGN KEY (Numero_CC) REFERENCES CLIENTE(Numero_CC),
     FOREIGN KEY (ID_da_Reserva) REFERENCES  RESERVA(ID_da_Reserva)
 );
 
+CREATE TABLE LOCALIZACAO(
+    Programa TEXT PRIMARY KEY,
+    Nome_da_Cidade TEXT,
+    FOREIGN KEY (Programa) REFERENCES TOUR(Programa),
+    FOREIGN KEY (Nome_da_Cidade) REFERENCES Cidade(Nome),
+);
