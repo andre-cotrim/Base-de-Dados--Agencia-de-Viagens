@@ -1,0 +1,46 @@
+PRAGMA foreign_keys=ON;
+
+INSERT INTO PASSAGEIRO (Numero_CC, Nome, Data_de_Nascimento, Check_Vacinacao_Necessaria, ID_Passaporte) 
+VALUES ("123456789","André Cotrim","20-03-2005",TRUE,"123456");
+VALUES ("234567891","João Marques","19-04-2005",TRUE,"234561");
+VALUES ("345678912","Pedro Coelho","19-05-2004",TRUE,"345612");
+VALUES ("456789123","João Silva","15-05-1990",TRUE,"456123");
+VALUES ("567891234","Maria Oliveira","22-08-1982",TRUE,"561234");
+VALUES ("678912345","Carlos Santos","01-12-2000",TRUE,"561234");
+VALUES ("789123456","Ana Costa","10-03-1992",TRUE,"612345");
+VALUES ("891234567","Pedro Almeida","25-07-1960",TRUE,"123457");
+VALUES ("123456780","Rafael Mendes","17-09-1998",TRUE,"234571");
+VALUES ("234567801","Juliana Ribeiro","03-04-1967",TRUE,"345712");
+VALUES ("345678012","Bruno Carvalho","28-11-2001",TRUE,"457123");
+VALUES ("456780123","Fernanda Dias","15-01-1995",TRUE,"571234");
+
+
+INSERT INTO CLIENTE (Numero_CC, IBAN, NIF, Email, Numero_de_Telefone, Morada_de_Faturacao)  
+VALUES ("123456789",);
+VALUES ("234567891",);
+VALUES ("345678912",);
+VALUES ("456789123",);
+VALUES ("567891234",);
+VALUES ("678912345","Carlos Costa","12-01-1986",TRUE,"561234");
+VALUES ("789123456","Ana Almeida","03-10-1967",TRUE,"612345");
+VALUES ("891234567","Pedro Mendes","07-05-1981",TRUE,"123457");
+VALUES ("123456780","Rafael Ribeiro","09-07-1987",TRUE,"234571");
+VALUES ("234567801","Juliana Carvalho","04-03-1993",TRUE,"345712");
+VALUES ("345678012","Bruno Dias","11-02-1999",TRUE,"457123");
+VALUES ("456780123","Fernanda Nascimento","01-05-1975",TRUE,"571234");
+
+
+INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia Aerea, Capacidade, Ano_de_Producao)
+
+VALUES ("2024","Boeing 737","TAP Air Portugal",180,2016);
+VALUES ("2023","Boeing 747","05-09-2004",TRUE,"345612");
+VALUES ("2022","Boeing 767","05-10-1990",TRUE,"456123");
+VALUES ("2021","Boeing 777","08-02-1980",TRUE,"561234");
+VALUES ("2020","Boeing 787 Dreamliner","12-01-1986",TRUE,"561234");
+VALUES ("2019","AAirbus A320","Ryanair",190,2018);
+VALUES ("2018","Airbus A330","07-05-1981",TRUE,"123457");
+VALUES ("2017","Airbus A350","09-07-1987",TRUE,"234571");
+VALUES ("2016","Airbus A380","04-03-1993",TRUE,"345712");
+VALUES ("2015","Embraer E-Jet E2","11-02-1999",TRUE,"457123");
+VALUES ("2014","Bombardier CRJ Series","01-05-1975",TRUE,"571234");
+VALUES ("2013","McDonnell Douglas MD-80","30-07-1998",TRUE,"712345");
