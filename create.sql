@@ -31,21 +31,17 @@ CREATE TABLE PASSAGEIRO(
 );
 SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascimento)) / 365 AS Idade FROM PASSAGEIRO;
 
---perguntar stor como fazer IDADE
---confirmar booleans
+--verificar todas as restriçoes
 --idade check passageiro cliente e empo espera
---fazer restricoes entre classes
 --REVER NOT NULLS
 --DEFAULT?
 --ON FDELETE?
 --NULL?
 --CONFIRMAR TUDO
---CLASSES DE ASSOCIACAO PODEM SE/ RELACOES NAO SE PODE
 --ON UPDATE CASCADE NOS FOREING KEYS
 --rever relacoes de todos que tem 2 pk
---perguntar quais q devem ter data loading
---vai tar analisar dados?
---data de reserva depois de data de paga,emto
+--data de reserva depois de data de pagaemto
+
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
     IBAN TEXT UNIQUE,
@@ -74,9 +70,8 @@ CREATE TABLE RESERVA(
     FOREIGN KEY (ID_da_Rota) REFERENCES ROTA(ID_da_Rota),
     CHECK (Data_de_Fim>Data_de_Inicio)
 );
-
 SELECT ID_da_Reserva, Data_de_Inicio,Data_de_Fim, (JULIANDAY(Data_de_Fim)-JULIANDAY(Data_de_Inicio)) AS DIAS FROM RESERVA;
---determinar numeros de passageiros
+
 
 
 CREATE TABLE AQUISICAO(
@@ -154,8 +149,8 @@ CREATE TABLE AEROPORTO (
 
 CREATE TABLE CIDADE (
     Nome TEXT PRIMARY KEY,
-    Região TEXT NOT NULL,
-    País TEXT NOT NULL
+    Regiao TEXT NOT NULL,
+    Pais TEXT NOT NULL
 );
 
 CREATE TABLE FUNCIONARIO(
@@ -234,3 +229,4 @@ CREATE TABLE ORIENTACAO(
 
 --Apaguei: Localização, equipa_de_bordo_piloto,equipa_de_bordo_hospedeiro,voo
 --adicionei: equipa de bordo,
+--dizer no relagtorio q n usamo triggers

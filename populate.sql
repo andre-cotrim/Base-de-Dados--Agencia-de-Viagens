@@ -67,6 +67,58 @@ VALUES ('345678012', 'PT11048202404604777634114', '219871008', 'claudiomorais@ex
 VALUES ('456780123', 'PT83634415458902926751425', '394415379', 'lopesnuno@example.com', '+351298205166', 'Rua Teresa Simões, 385, 9050-181 Espinho');
 VALUES ('891234567', 'PT18255716762684131647457', '950852776', 'ruivaz@example.net', '(351) 255502953', 'Rua Caetana Miranda, 26, 6483-340 Matosinhos');
 
+INSERT INTO PNR(Numero_CC,ID_da_Reserva)
+VALUES ('123456789', '607');
+VALUES ('234567891', '849');
+VALUES ('345678912', '650');
+VALUES ('456789123', '513');
+VALUES ('567891234', '697');
+VALUES ('678912345', '315');
+VALUES ('789123456', '57');
+VALUES ('123456780', '374');
+VALUES ('234567801', '841');
+VALUES ('345678012', '66');
+VALUES ('456780123', '251');
+VALUES ('891234567', '250');
+VALUES ("917716737", 607),
+VALUES ("621445376", 849),
+VALUES ("952149249", 650),
+VALUES ("171696152", 513),
+VALUES ("461173781", 697),
+VALUES ("584571174", 315),
+VALUES ("786248735", 57),
+VALUES ("497528742", 374),
+VALUES ("475272372", 841),
+VALUES ("265476152", 66),
+VALUES ("659739645", 251),
+VALUES ("547124286", 250),
+VALUES ("347735776", 607),
+VALUES ("725851781", 849),
+VALUES ("684793125", 650),
+VALUES ("538449913", 513),
+VALUES ("388232721", 697),
+VALUES ("825332531", 315),
+VALUES ("439493593", 57),
+VALUES ("171112126", 374),
+VALUES ("755319768", 841),
+VALUES ("729882559", 66),
+VALUES ("263468558", 251),
+VALUES ("141896798", 250),
+VALUES ("237588789", 607),
+VALUES ("932231265", 849),
+VALUES ("815445454", 650),
+VALUES ("871164622", 513),
+VALUES ("789191959", 697),
+VALUES ("263355728", 315),
+VALUES ("312144685", 57),
+VALUES ("551265332", 374),
+VALUES ("832259435", 841),
+VALUES ("927769156", 66),
+VALUES ("251322343", 251),
+VALUES ("576853676", 250),
+VALUES ("627151891", 607),
+VALUES ("776412539", 849);
+
 INSERT INTO RESERVA (ID_da_Reserva,Data_de_Inicio,Data_de_Fim,Bagagem_Total)
 VALUES ("607", '2024-10-01', '2024-10-06', 3);
 VALUES ("849", '2024-01-31', '2024-02-02', 4);
@@ -124,6 +176,7 @@ VALUES ('09','Tokyo', 'GUIDE005');
 VALUES ('10','Amsterdam', 'GUIDE005');
 VALUES ('11','Sydney', 'GUIDE011');
 VALUES ('12','Amsterdam', 'GUIDE010');
+--verificar tour com as cidades 
 
 INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia Aerea, Capacidade, Ano_de_Producao)
 VALUES (2024, 'Boeing 737', 'TAP Air Portugal', 180, 2016)
@@ -138,6 +191,36 @@ VALUES (2016, 'Airbus A380', 'Qantas Airways', 550, 1993);
 VALUES (2015, 'Embraer E-Jet E2', 'Azul Linhas Aéreas', 120, 1999);
 VALUES (2014, 'Bombardier CRJ Series', 'Delta Airlines', 100, 1975);
 VALUES (2013, 'McDonnell Douglas MD-80', 'American Airlines', 155, 1998);
+
+INSERT INTO RESERVA_DE_TOUR(ID_da_Reserva,Programa)
+VALUES ("607", );
+VALUES ("849",);
+VALUES ("650", );
+VALUES ("513", );
+VALUES ("697", );
+VALUES ("315", );
+VALUES ("57", );
+VALUES ("374", );
+VALUES ("841", );
+VALUES ("66", );
+VALUES ("251", );
+VALUES ("250", );
+
+INSERT INTO RESERVA_DE_ALOJAMENTO(ID_da_Reserva,ID_do_Alojamento)
+VALUES ("607", );
+VALUES ("849",);
+VALUES ("650", );
+VALUES ("513", );
+VALUES ("697", );
+VALUES ("315", );
+VALUES ("57", );
+VALUES ("374", );
+VALUES ("841", );
+VALUES ("66", );
+VALUES ("251", );
+VALUES ("250", );
+
+INSERT INTO ORIENTACAO(Programa,ID_Diploma_de_Turismo)
 
 INSERT INTO VIAGEM(ID_da_Rota, Estado_da_Viagem, Hora_de_Embarque, Hora_de_Chegada, Cidade_de_Embarque, Cidade_de_Chegada)
 VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0', True, '09:21:00', '11:21:00', 'London', 'Dubai');
@@ -167,7 +250,6 @@ VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 'GIG', 'LAX', '06:38:51', '10:10
 VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'CDG', 'LAX', '20:42:37', '23:09:05');
 VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'BCN', 'JFK', '23:16:27', '17:29:42');
 
-
 INSERT INTO AEROPORTO (Nome_do_Aeroporto, Porta_de_Embarque, Cidade)
 VALUES ('LHR', 41, 'London');
 VALUES ('DXB', 34, 'Dubai');
@@ -182,7 +264,20 @@ VALUES ('BCN', 13, 'Barcelona');
 VALUES ('FCO', 37, 'Rome');
 VALUES ('LAX', 9, 'Los Angeles');
 
-INSERT INTO CIDADE ()
+INSERT INTO CIDADE (Nome,Regiao,Pais)
+VALUES ('London', 'Inglaterra', 'Reino Unido');
+VALUES ('Dubai', 'Emirados Árabes Unidos', 'Emirados Árabes Unidos');
+VALUES ('Singapore', 'Sudeste Asiático', 'Singapura');
+VALUES ('Paris', 'Île-de-France', 'França');
+VALUES ('Madrid', 'Madrid', 'Espanha');
+VALUES ('Sydney', 'Nova Gales do Sul', 'Austrália');
+VALUES ('New York', 'Nova Iorque', 'Estados Unidos');
+VALUES ('Berlin', 'Berlim', 'Alemanha');
+VALUES ('Rio de Janeiro', 'Rio de Janeiro', 'Brasil');
+VALUES ('Barcelona', 'Catalunha', 'Espanha');
+VALUES ('Rome', 'Lazio', 'Itália');
+VALUES ('Los Angeles', 'Califórnia', 'Estados Unidos');
+--rever 
 
 INSERT INTO FUNCIONARIO (ID_Funcionario, Nome, Anos_de_Serviço, Salário, Numero_de_Telefone, Email, NIF, IBAN)
 VALUES ('3195c0ba-ac5d-4aa7-840d-9c855d6ba85b', 'César Campos', 11, '€44462', '969024279', 'tomasandrade@example.org', '507995843', 'PT95333388154013248983692');
