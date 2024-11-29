@@ -47,6 +47,7 @@ SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascim
 --ON UPDATE CASCADE NOS FOREING KEYS
 --rever relacoes de todos que tem 2 pk
 --perguntar quais q devem ter data loading
+--vai tar analisar dados?
 
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
@@ -108,7 +109,6 @@ CREATE TABLE ALOJAMENTO(
 
 CREATE TABLE TOUR(
     Programa TEXT,
-    Idioma TEXT,
     Cidade TEXT,
     ID_Guia TEXT,
     PRIMARY KEY (Programa,Idioma)
@@ -120,7 +120,7 @@ CREATE TABLE TOUR(
 
 
 CREATE TABLE VIAGEM(
-    ID_da_Rota INT PRIMARY KEY,
+    ID_da_Rota TEXT PRIMARY KEY,
     Estado_da_Viagem BOOLEAN NOT NULL,
     Hora_de_Embarque TIME NOT NULL,
     Hora_de_Chegada TIME NOT NULL,
@@ -142,7 +142,7 @@ CREATE TABLE ROTA(
     FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota),
     FOREIGN KEY (Aeroporto_Chegada) REFERENCES AEROPORTO(Nome),
     FOREIGN KEY (Aeroporto_Partida) REFERENCES AEROPORTO(Nome)
-    CHECK (((STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 > 0)
+    CHECK (((STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 > 0))
 );
 SELECT (STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 AS Tempo_de_Espera FROM ROTA;
 --NO NOSSO MODELO RELACIONAL SO TEM UMA PRIMARY KEY E NAO 3 NA ROTA

@@ -88,7 +88,7 @@ VALUES ('12','Amsterdam', 'GUIDE010');
 
 INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia Aerea, Capacidade, Ano_de_Producao)
 VALUES (2024, 'Boeing 737', 'TAP Air Portugal', 180, 2016)
-VALUES (2023, 'Boeing 747', 'British Airways', 410JFK, 2004);
+VALUES (2023, 'Boeing 747', 'British Airways', 410, 2004);
 VALUES (2022, 'Boeing 767', 'Lufthansa', 250, 1990);
 VALUES (2021, 'Boeing 777', 'Qatar Airways', 350, 1980),
 VALUES (2020, 'Boeing 787 Dreamliner', 'Singapore Airlines', 296, 1986);
