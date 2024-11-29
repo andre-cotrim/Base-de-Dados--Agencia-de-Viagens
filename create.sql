@@ -13,7 +13,8 @@ DROP TABLE IF EXISTS FUNCIONARIO;
 DROP TABLE IF EXISTS GUIA;
 DROP TABLE IF EXISTS HOSPEDEIRO;
 DROP TABLE IF EXISTS PILOTO;
-DROP TABLE IF EXISTS EQUIPA_DE_BORDO;
+DROP TABLE IF EXISTS HOSPEDEIRO_VIAGEM;
+DROP TABLE IF EXISTS PILOTO_VIAGEM;
 DROP TABLE IF EXISTS AVIAO;
 DROP TABLE IF EXISTS RESERVA_DE_TOUR;
 DROP TABLE IF EXISTS RESERVA_DE_ALOJAMENTO;
@@ -26,26 +27,17 @@ CREATE TABLE PASSAGEIRO(
     Data_de_Nascimento DATE NOT NULL, 
     Check_Vacinacao_Necessaria BOOLEAN NOT NULL,
     ID_Passaporte TEXT NOT NULL UNIQUE,
-    CHECK ((JULIANDAY('now') - JULIANDAY(Data_de_Nascimento)) / 365 >= 18)
+    CHECK ((JULIANDAY('now') - JULIANDAY(Data_de_Nascimento)) / 365 >= 18),
     CHECK (Check_Vacinacao_Necessaria=TRUE)
 );
 SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascimento)) / 365 AS Idade FROM PASSAGEIRO;
 
---perguntar stor como fazer IDADE
 --confirmar booleans
---idade check passageiro cliente e empo espera
---fazer restricoes entre classes
---REVER NOT NULLS
---DEFAULT?
+--Default
 --ON FDELETE?
 --NULL?
---CONFIRMAR TUDO
---CLASSES DE ASSOCIACAO PODEM SE/ RELACOES NAO SE PODE
 --ON UPDATE CASCADE NOS FOREING KEYS
---rever relacoes de todos que tem 2 pk
---perguntar quais q devem ter data loading
---vai tar analisar dados?
---data de reserva depois de data de paga,emto
+
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
     IBAN TEXT UNIQUE,
@@ -64,7 +56,6 @@ CREATE TABLE PNR(
     FOREIGN KEY (ID_da_Reserva) REFERENCES RESERVA(ID_da_Reserva)
 );
 
---MODELO RELACIONAL NAO TEM ID DE ROTA (FOI ADICIONADO DEVIDO A MULTIPLICIDADES) QUE FAZER?
 CREATE TABLE RESERVA(
     ID_da_Reserva TEXT PRIMARY KEY,
     Data_de_Inicio DATE NOT NULL,
@@ -76,8 +67,6 @@ CREATE TABLE RESERVA(
 );
 
 SELECT ID_da_Reserva, Data_de_Inicio,Data_de_Fim, (JULIANDAY(Data_de_Fim)-JULIANDAY(Data_de_Inicio)) AS DIAS FROM RESERVA;
---determinar numeros de passageiros
-
 
 CREATE TABLE AQUISICAO(
     ID_Transacao TEXT PRIMARY KEY,
@@ -86,14 +75,14 @@ CREATE TABLE AQUISICAO(
     Data_de_Pagamento DATE,
     Valor_Pago INT NOT NULL CHECK (Valor_Pago>0),
     Estado_de_Pagamento BOOLEAN NOT NULL,
-    PRIMARY KEY(Numero_CC,ID_da_Reserva,ID_Transacao),
     FOREIGN KEY (Numero_CC) REFERENCES CLIENTE(Numero_CC),
     FOREIGN KEY (ID_da_Reserva) REFERENCES  RESERVA(ID_da_Reserva),
     
 );
 
 CREATE TABLE ALOJAMENTO(
-    Endereco TEXT PRIMARY KEY,
+    ID_de_Alojamento TEXT PRIMARY KEY,
+    Endereco TEXT NOT NULL,
     Cidade TEXT NOT NULL,
     Check_in DATE NOT NULL,
     Check_out DATE NOT NULL,
@@ -105,16 +94,13 @@ CREATE TABLE ALOJAMENTO(
 );
 
 CREATE TABLE TOUR(
-    Programa TEXT,
-    Cidade TEXT,
+    ID_de_Tour TEXT PRIMARY KEY,
+    Programa TEXT NOT NULL,
+    Cidade TEXT NOT NULL,
     ID_Guia TEXT,
-    PRIMARY KEY (Programa,Idioma)
     FOREIGN KEY (Cidade) REFERENCES CIDADE(Nome),
-    FOREIGN KEY (ID_Guia) REFERENCES FUNCIONARIO(ID_Funcionario)
+    FOREIGN KEY (ID_Guia) REFERENCES GUIA(ID_Funcionario)
 );
---não sei derivar idioma || Pedro: eu vi no chatGPT como se faz mas nao tenho a certeza se demos nas aulas
---usa um TRIGGER mas nao sei se demos nas aulas
-
 
 CREATE TABLE VIAGEM(
     ID_da_Rota TEXT PRIMARY KEY,
@@ -130,39 +116,38 @@ CREATE TABLE VIAGEM(
 );
 
 CREATE TABLE ROTA(
-    ID_da_Rota TEXT,
-    Aeroporto_Partida TEXT,
-    Aeroporto_Chegada TEXT,
+    ID_da_Rota TEXT PRIMARY KEY,
+    Aeroporto_de_Partida TEXT NOT NULL,
+    Aeroporto_de_Chegada TEXT NOT NULL,
     Hora_de_Partida TIME NOT NULL,
     Hora_de_Chegada TIME NOT NULL,
-    PRIMARY KEY (ID_da_Rota,Aeroporto_Partida,Aeroporto_Chegada),
     FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota),
-    FOREIGN KEY (Aeroporto_Chegada) REFERENCES AEROPORTO(Nome),
-    FOREIGN KEY (Aeroporto_Partida) REFERENCES AEROPORTO(Nome)
+    FOREIGN KEY (Aeroporto_Chegada) REFERENCES AEROPORTO(ID_de_Aeroporto),
+    FOREIGN KEY (Aeroporto_Partida) REFERENCES AEROPORTO(ID_de_Aeroporto),
     CHECK (((STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 > 0))
 );
 SELECT (STRFTIME('%s', Hora_de_Chegada) - STRFTIME('%s', Hora_de_Partida)) / 60 AS Tempo_de_Espera FROM ROTA;
---NO NOSSO MODELO RELACIONAL SO TEM UMA PRIMARY KEY E NAO 3 NA ROTA
-
 
 CREATE TABLE AEROPORTO (
-    Nome TEXT PRIMARY KEY,
+    ID_de_Aeroporto TEXT PRIMARY KEY,
+    Nome TEXT NOT NULL,
     Porta_de_Embarque INT NOT NULL,
     Cidade TEXT NOT NULL,
     FOREIGN KEY (Cidade) REFERENCES CIDADE(Nome)
 );
 
 CREATE TABLE CIDADE (
-    Nome TEXT PRIMARY KEY,
-    Região TEXT NOT NULL,
-    País TEXT NOT NULL
+    Nome TEXT,
+    Regiao TEXT,
+    Pais TEXT NOT NULL,
+    PRIMARY KEY(Nome, Pais)
 );
 
 CREATE TABLE FUNCIONARIO(
     ID_Funcionario TEXT PRIMARY KEY,
     Nome TEXT NOT NULL,
-    Anos_de_Serviço INT NOT NULL,
-    Salário TEXT NOT NULL,
+    Anos_de_Servico INT NOT NULL,
+    Salario TEXT NOT NULL,
     Numero_de_Telefone Text NOT NULL UNIQUE,
     Email TEXT NOT NULL UNIQUE,
     NIF TEXT NOT NULL UNIQUE,
@@ -170,33 +155,38 @@ CREATE TABLE FUNCIONARIO(
 );
 
 CREATE TABLE GUIA(
-    ID_Funcionario TEXT,
+    ID_Funcionario TEXT PRIMARY KEY,
     Idioma TEXT NOT NULL,
-    ID_Diploma_em_Turismo TEXT,
-    PRIMARY KEY (ID_Funcionario, ID_Diploma_em_Turismo),
+    ID_Diploma_em_Turismo TEXT NOT NULL,
     FOREIGN KEY (ID_Funcionario) REFERENCES FUNCIONARIO(ID_Funcionario)
 );
 
 CREATE TABLE HOSPEDEIRO(
-    ID_Funcionario TEXT,
-    ID_Certidao_De_Formacao TEXT,
-    PRIMARY KEY (ID_Funcionario,ID_Certidao_De_Formacao)
+    ID_Funcionario TEXT PRIMARY KEY,
+    ID_Certidao_De_Formacao TEXT NOT NULL,
     FOREIGN KEY (ID_Funcionario) REFERENCES FUNCIONARIO(ID_Funcionario)
 );
 
 CREATE TABLE PILOTO(
-    ID_Funcionario TEXT,
-    ID_Licensa TEXT,
-    PRIMARY KEY (ID_Funcionario, ID_Licensa)
+    ID_Funcionario TEXT PRIMARY KEY,
+    ID_Licensa TEXT NOT NULL,
     FOREIGN KEY (ID_Funcionario) REFERENCES FUNCIONARIO(ID_Funcionario)
 );
 
-CREATE TABLE EQUIPA_DE_BORDO(
+CREATE TABLE HOSPEDEIRO_VIAGEM(
     ID_da_Rota TEXT,
     ID_Funcionario TEXT,
     FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota),
-    FOREIGN KEY (ID_Funcionario) REFERENCES FUNCIONARIO(ID_Funcionario)
-    PRIMARY KEY( ID_da_Rota, ID_Funcionario)
+    FOREIGN KEY (ID_Funcionario) REFERENCES HOSPEDEIRO(ID_Funcionario)
+    PRIMARY KEY(ID_da_Rota, ID_Funcionario)
+);
+
+CREATE TABLE PILOTO_VIAGEM(
+    ID_da_Rota TEXT,
+    ID_Funcionario TEXT,
+    FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota),
+    FOREIGN KEY (ID_Funcionario) REFERENCES PILOTO(ID_Funcionario),
+    PRIMARY KEY(ID_da_Rota, ID_Funcionario)
 );
 
 CREATE TABLE AVIAO(
@@ -204,33 +194,33 @@ CREATE TABLE AVIAO(
     Modelo TEXT NOT NULL,
     Companhia_Aerea TEXT NOT NULL,
     Capacidade INT NOT NULL,
-    Ano_de_Produção INT NOT NULL
+    Ano_de_Producao INT NOT NULL
 );
---FALTA POR UM CHECK PARA VER SE O NR DE PASSAGEIROS É INFERIOR À CAPACIDADE DO AVIAO
+
 
 CREATE TABLE RESERVA_DE_TOUR(
     ID_da_Reserva TEXT, 
-    Programa TEXT,
-    PRIMARY KEY (ID_da_Reserva,Programa)
+    ID_de_Tour TEXT,
+    PRIMARY KEY (ID_da_Reserva,ID_de_Tour)
     FOREIGN KEY (ID_da_Reserva) REFERENCES RESERVA(ID_da_Reserva),
-    FOREIGN KEY (Programa) REFERENCES TOUR(Programa)
+    FOREIGN KEY (ID_de_Tour) REFERENCES TOUR(ID_de_Tour)
 );
 
 CREATE TABLE RESERVA_DE_ALOJAMENTO(
     ID_da_Reserva TEXT, 
-    Programa TEXT,
-    PRIMARY KEY (ID_da_Reserva,Endereco)
+    ID_de_Alojamento TEXT,
+    PRIMARY KEY (ID_da_Reserva, ID_de_Alojamento)
     FOREIGN KEY (ID_da_Reserva) REFERENCES RESERVA(ID_da_Reserva),
-    FOREIGN KEY (Endereco) REFERENCES ALOJAMENTO(Endereco),
+    FOREIGN KEY (ID_de_Alojamento) REFERENCES ALOJAMENTO(ID_de_Alojamento),
 );
 
 CREATE TABLE ORIENTACAO(
-    Programa TEXT,
-    ID_Diploma_em_Turismo TEXT,
-    PRIMARY KEY (Programa, ID_Diploma_de_Turismo),
-    FOREIGN KEY (Programa) REFERENCES TOUR(ID_da_Rota),
-    FOREIGN KEY (ID_Diploma_em_Turismo) REFERENCES GUIA(ID_Diploma_em_Turismo)    
+    ID_de_Tour TEXT,
+    ID_Funcionario TEXT,
+    PRIMARY KEY (ID_de_Tour, ID_Funcionario),
+    FOREIGN KEY (ID_de_Tour) REFERENCES TOUR(ID_de_Tour),
+    FOREIGN KEY (ID_Funcionario) REFERENCES GUIA(ID_Funcionario)    
 );
 
---Apaguei: Localização, equipa_de_bordo_piloto,equipa_de_bordo_hospedeiro,voo
---adicionei: equipa de bordo,
+--Apaguei: Localização,voo, EQUIPA DE BORDO
+--adicionei: PILOTO_VIAGEM,HOSPEDEIRO_VIAGEM
