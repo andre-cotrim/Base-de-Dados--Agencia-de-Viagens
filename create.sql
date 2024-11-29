@@ -20,13 +20,12 @@ DROP TABLE IF EXISTS RESERVA_DE_ALOJAMENTO;
 DROP TABLE IF EXISTS ORIENTACAO;
 --CONFIRMAR ESTES DROPS
 
-
 CREATE TABLE PASSAGEIRO(
     Numero_CC TEXT PRIMARY KEY,
     Nome TEXT NOT NULL, 
     Data_de_Nascimento DATE NOT NULL, 
     Check_Vacinacao_Necessaria BOOLEAN NOT NULL,
-    ID_Passaporte INT NOT NULL UNIQUE,
+    ID_Passaporte TEXT NOT NULL UNIQUE,
     CHECK ((JULIANDAY('now') - JULIANDAY(Data_de_Nascimento)) / 365 >= 18)
     CHECK (Check_Vacinacao_Necessaria=TRUE)
 );
@@ -34,8 +33,6 @@ SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascim
 
 --perguntar stor como fazer IDADE
 --confirmar booleans
---constrain
---nulls
 --idade check passageiro cliente e empo espera
 --fazer restricoes entre classes
 --REVER NOT NULLS
@@ -48,7 +45,7 @@ SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascim
 --rever relacoes de todos que tem 2 pk
 --perguntar quais q devem ter data loading
 --vai tar analisar dados?
-
+--data de reserva depois de data de paga,emto
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
     IBAN TEXT UNIQUE,
@@ -161,7 +158,6 @@ CREATE TABLE CIDADE (
     País TEXT NOT NULL
 );
 
---NIF E IBAN NAO SAO PRIMARY KEYS? VER NO MODELO RELACIONAL TAMBEM
 CREATE TABLE FUNCIONARIO(
     ID_Funcionario TEXT PRIMARY KEY,
     Nome TEXT NOT NULL,
@@ -170,11 +166,8 @@ CREATE TABLE FUNCIONARIO(
     Numero_de_Telefone Text NOT NULL UNIQUE,
     Email TEXT NOT NULL UNIQUE,
     NIF TEXT NOT NULL UNIQUE,
-    IBAN TEXT NOT NULL UNIQUE,
-   
-    
+    IBAN TEXT NOT NULL UNIQUE,  
 );
-
 
 CREATE TABLE GUIA(
     ID_Funcionario TEXT,
