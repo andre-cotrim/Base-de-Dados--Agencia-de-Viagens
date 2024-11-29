@@ -50,6 +50,7 @@ CREATE TABLE PASSAGEIRO(
 --ON UPDATE CASCADE NOS FOREING KEYS
 --rever relacoes de todos que tem 2 pk
 --perguntar quais q devem ter data loading
+--vai tar analisar dados?
 
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
@@ -106,13 +107,12 @@ CREATE TABLE ALOJAMENTO(
 --duracao??
 CREATE TABLE TOUR(
     Programa TEXT,
-    Idioma TEXT,
     Duracao INT,
     Cidade TEXT,
     ID_Guia TEXT,
     PRIMARY KEY (Programa,Idioma)
     FOREIGN KEY (Cidade) REFERENCES CIDADE(Nome_da_Cidade),
-    FOREIGN KEY (ID_Guia) REFERENCES FUNCIONARIO(ID_F)
+    FOREIGN KEY (ID_Guia) REFERENCES FUNCIONARIO(ID_Funcionario)
 );
 --não sei derivar idioma || Pedro: eu vi no chatGPT como se faz mas nao tenho a certeza se demos nas aulas
 --usa um TRIGGER mas nao sei se demos nas aulas
@@ -126,7 +126,7 @@ CREATE TABLE AVIAO(
 );
 
 CREATE TABLE VIAGEM(
-    ID_da_Rota INT PRIMARY KEY,
+    ID_da_Rota TEXT PRIMARY KEY,
     Estado_da_Viagem BOOLEAN,
     Hora_de_Embarque TIME NOT NULL,
     Hora_de_Chegada TIME NOT NULL,
@@ -148,8 +148,8 @@ CREATE TABLE ROTA(
     ID_da_Rota TEXT,
     Aeroporto_Partida TEXT,
     Aeroporto_Chegada TEXT,
-    Hora_de_Chegada TIME NOT NULL,
     Hora_de_Partida TIME NOT NULL,
+    Hora_de_Chegada TIME NOT NULL,
     PRIMARY KEY (ID_da_Rota,Aeroporto_Partida,Aeroporto_Chegada),
     FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota),
     FOREIGN KEY (Aeroporto_Chegada) REFERENCES AEROPORTO(Nome_do_Aeroporto),
@@ -164,6 +164,7 @@ CREATE TABLE AEROPORTO (
     Cidade TEXT NOT NULL,
     FOREIGN KEY (Cidade) REFERENCES Cidade(Nome_da_Cidade)
 );
+
 -- como que fica o nome?
 CREATE TABLE CIDADE (
     Nome_da_Cidade TEXT PRIMARY KEY,
