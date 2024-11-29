@@ -32,7 +32,6 @@ CREATE TABLE PASSAGEIRO(
 
 SELECT Numero_CC, Data_de Nascimento, (JULIANDAY('now')-JULIANDAY(Data_de_Nascimento)) / 365 AS Idade FROM PASSAGEIRO;
 
---Default
 
 CREATE TABLE CLIENTE(
     Numero_CC TEXT PRIMARY KEY,
