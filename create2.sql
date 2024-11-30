@@ -42,12 +42,11 @@ CREATE TABLE CLIENTE(
 );
 
 CREATE TABLE CIDADE (
-    Nome TEXT,
+    Nome TEXT PRIMARY KEY,
     Regiao TEXT,
-    Pais TEXT NOT NULL,
-    PRIMARY KEY(Nome, Pais)
+    Pais TEXT NOT NULL
 );
-
+--
 CREATE TABLE AVIAO(
     ID_Aviao INTEGER PRIMARY KEY,
     Modelo TEXT NOT NULL,

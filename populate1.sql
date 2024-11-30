@@ -103,7 +103,7 @@ VALUES
 
 INSERT INTO VIAGEM (ID_da_Rota, Estado_da_Viagem, Hora_de_Embarque, Hora_de_Chegada, Cidade_de_Embarque, Cidade_de_Chegada, ID_Aviao)
 VALUES
-    ('601a5df6-ac8a-4791-b08a-579cd57f5107', 1, '09:21:00', '11:21:00', 'London', 'Dubai', 204),
+    ('601a5df6-ac8a-4791-b08a-579cd57f5107', 1, '09:21:00', '11:21:00', 'London', 'Dubai', 2024),
     ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 2, '15:08:00', '18:03:00', 'London', 'Singapore', 2023),
     ('3e647c62-d449-4755-b702-7bb71cd628d0', 2, '12:28:00', '14:28:00', 'Singapore', 'London', 2022),
     ('b5a486c1-6230-416f-ac46-102c949a8d0a', 2, '01:10:00', '03:10:00', 'London', 'Paris', 2021),
@@ -118,18 +118,18 @@ VALUES
 
 INSERT INTO ROTA (ID_da_Rota, Aeroporto_de_Partida, Aeroporto_de_Chegada, Hora_de_Partida, Hora_de_Chegada)
 VALUES
-    ('3e647c62-d449-4755-b702-7bb71cd628d0', 'LHR', 'DXB', '07:24:00', '09:21:00'),
-    ('bbae8c8a-80c7-4a7f-b623-20304b200f75', 'LHR', 'SIN', '10:36:42', '13:53:00'),
-    ('601a5df6-ac8a-4791-b08a-579cd57f5107', 'SIN', 'LHR', '02:05:59', '08:49:41'),
-    ('b5a486c1-6230-416f-ac46-102c949a8d0a', 'DXB', 'CDG', '07:50:12', '12:29:13'),
-    ('012db948-b26c-48b9-80f8-ebccb421fea6', 'SYD', 'CDG', '16:11:17', '18:45:29'),
-    ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 'JFK', 'GIG', '14:56:58', '16:54:36'),
-    ('fb65fb58-9145-4fd3-bede-0622afb495d4', 'TXL', 'CDG', '17:20:13', '18:41:55'),
-    ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 'FCO', 'TXL', '11:21:20', '12:27:47'),
-    ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 'GIG', 'SYD', '03:28:41', '17:02:16'),
-    ('c464f144-56d8-4af0-a340-ecb90511153e', 'GIG', 'LAX', '06:38:51', '10:10:59'),
-    ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'CDG', 'LAX', '20:42:37', '23:09:05'),
-    ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'BCN', 'JFK', '13:16:27', '17:29:42');
+    ('3e647c62-d449-4755-b702-7bb71cd628d0', '1', '2', '07:24:00', '09:21:00'),
+    ('bbae8c8a-80c7-4a7f-b623-20304b200f75', '1', '3', '10:36:42', '13:53:00'),
+    ('601a5df6-ac8a-4791-b08a-579cd57f5107', '3', '1', '02:05:59', '08:49:41'),
+    ('b5a486c1-6230-416f-ac46-102c949a8d0a', '2', '4', '07:50:12', '12:29:13'),
+    ('012db948-b26c-48b9-80f8-ebccb421fea6', '6', '4', '16:11:17', '18:45:29'),
+    ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '7', '9', '14:56:58', '16:54:36'),
+    ('fb65fb58-9145-4fd3-bede-0622afb495d4', '8', '4', '17:20:13', '18:41:55'),
+    ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '11', '8', '11:21:20', '12:27:47'),
+    ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '9', '6', '03:28:41', '17:02:16'),
+    ('c464f144-56d8-4af0-a340-ecb90511153e', '9', '12', '06:38:51', '10:10:59'),
+    ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '4', '12', '20:42:37', '23:09:05'),
+    ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '10', '7', '13:16:27', '17:29:42');
 --confirmar as horas e johny responder
 
 INSERT INTO RESERVA (ID_da_Reserva, Data_de_Inicio, Data_de_Fim, Bagagem_Total, ID_da_Rota)
@@ -243,24 +243,24 @@ VALUES
 
 INSERT INTO TOUR (ID_de_Tour, Programa, Cidade, ID_Guia)
 VALUES 
-    ('TOUR-20241130-001', '01', 'Rome', 'GUIDE005'),
-    ('TOUR-20241130-002', '02', 'Rio de Janeiro', 'GUIDE010'),
-    ('TOUR-20241130-003', '03', 'London', 'GUIDE006'),
-    ('TOUR-20241130-004', '04', 'Barcelona', 'GUIDE011'),
-    ('TOUR-20241130-005', '05', 'Rome', 'GUIDE009'),
-    ('TOUR-20241130-006', '06', 'New York', 'GUIDE012'),
-    ('TOUR-20241130-007', '07', 'Berlin', 'GUIDE009'),
-    ('TOUR-20241130-008', '08', 'Los Angeles', 'GUIDE011'),
-    ('TOUR-20241130-009', '09', 'Singapore', 'GUIDE005'),
-    ('TOUR-20241130-010', '10', 'Amsterdam', 'GUIDE005'),
-    ('TOUR-20241130-011', '11', 'Sydney', 'GUIDE011'),
-    ('TOUR-20241130-012', '12', 'Paris', 'GUIDE010'),
-    ('TOUR-20241130-013', '13', 'Dubai', 'GUIDE019');
+    ('TOUR-20241130-001', '01', 'Rome', 'd4290269-7b44-41e0-a36c-cbfda1bf1c1d'),
+    ('TOUR-20241130-002', '02', 'Rio de Janeiro', '1db4c891-c05e-4039-be6c-90fb2ef181d9'),
+    ('TOUR-20241130-003', '03', 'London', 'b6a0e394-b051-4608-bbaa-d4526840af0f'),
+    ('TOUR-20241130-004', '04', 'Barcelona',  '9cd57f6b-f52b-490c-8904-2296da4b4aa4'),
+    ('TOUR-20241130-005', '05', 'Dubai', 'c82c0a78-6d3b-4197-9bf8-36a6823760a8'),
+    ('TOUR-20241130-006', '06', 'New York','f936708a-44be-4834-9909-470e7ca85e23'),
+    ('TOUR-20241130-007', '07', 'Berlin', 'e2c959da-f939-4c50-8b79-daefa5861597'),
+    ('TOUR-20241130-008', '08', 'Los Angeles',  '2bcc7ae4-cf19-4f7c-9ccf-dcfd10d463f2'),
+    ('TOUR-20241130-009', '09', 'Singapore', '8b8daf39-19e7-4732-b003-cc71fb5a2fb4'),
+    ('TOUR-20241130-010', '10', 'Amsterdam', '3195c0ba-ac5d-4aa7-840d-9c855d6ba85b'),
+    ('TOUR-20241130-011', '11', 'Sydney','741dc207-6a48-473a-91af-0b6d431c2b78'),
+    ('TOUR-20241130-012', '12', 'Paris', '431619cf-b487-4055-99ec-e0df66e5f347');
+
 --verificar tour com as cidades 
 
 INSERT INTO RESERVA_DE_TOUR (ID_da_Reserva, ID_de_Tour)
 VALUES 
-  ('607', 'TOUR-20241130-013'),
+  ('607', 'TOUR-20241130-010'),
   ('849', 'TOUR-20241130-009'),
   ('650', 'TOUR-20241130-003'),
   ('513', 'TOUR-20241130-012'),
@@ -398,7 +398,7 @@ VALUES
   ('650', 'ALJ-20241130-003'),
   ('513', 'ALJ-20241130-004'),
   ('697', 'ALJ-20241130-005'),
-  ('315', 'ALJ-20241130-012'),
+  ('315', 'ALJ-20241130-0012'),
   ('57', 'ALJ-20241130-006'),
   ('374', 'ALJ-20241130-007'),
   ('841', 'ALJ-20241130-008'),
@@ -408,15 +408,15 @@ VALUES
 
 INSERT INTO ORIENTACAO (ID_de_Tour, ID_Funcionario)
 VALUES 
-  ('TOUR-20241130-013', '3195c0ba-ac5d-4aa7-840d-9c855d6ba85b'),
+  ('TOUR-20241130-010', '3195c0ba-ac5d-4aa7-840d-9c855d6ba85b'),
   ('TOUR-20241130-009', '8b8daf39-19e7-4732-b003-cc71fb5a2fb4'),
   ('TOUR-20241130-003', 'b6a0e394-b051-4608-bbaa-d4526840af0f'),
-  ('TOUR-20241130-012', 'd4290269-7b44-41e0-a36c-cbfda1bf1c1d'),
+  ('TOUR-20241130-001', 'd4290269-7b44-41e0-a36c-cbfda1bf1c1d'),
   ('TOUR-20241130-012', '431619cf-b487-4055-99ec-e0df66e5f347'),
   ('TOUR-20241130-002', '1db4c891-c05e-4039-be6c-90fb2ef181d9'),
-  ('TOUR-20241130-012', '9cd57f6b-f52b-490c-8904-2296da4b4aa4'),
+  ('TOUR-20241130-004', '9cd57f6b-f52b-490c-8904-2296da4b4aa4'),
   ('TOUR-20241130-007', 'e2c959da-f939-4c50-8b79-daefa5861597'),
   ('TOUR-20241130-011', '741dc207-6a48-473a-91af-0b6d431c2b78'),
   ('TOUR-20241130-008', '2bcc7ae4-cf19-4f7c-9ccf-dcfd10d463f2'),
-  ('TOUR-20241130-008', 'c82c0a78-6d3b-4197-9bf8-36a6823760a8'),
+  ('TOUR-20241130-005', 'c82c0a78-6d3b-4197-9bf8-36a6823760a8'),
   ('TOUR-20241130-006', 'f936708a-44be-4834-9909-470e7ca85e23');
