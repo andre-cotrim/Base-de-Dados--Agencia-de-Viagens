@@ -1,57 +1,27 @@
 PRAGMA foreign_keys=ON;
  
 INSERT INTO PASSAGEIRO (Numero_CC, Nome, Data_de_Nascimento, Check_Vacinacao_Necessaria, ID_Passaporte)
-VALUES ("123456789","André Cotrim","2005-03-20",TRUE,"123456");sq
-VALUES ("234567891","João Marques","2005-04-19",TRUE,"234561");
-VALUES ("345678912","Pedro Coelho","2004-05-19",TRUE,"345612");
-VALUES ("456789123","João Silva","1990-05-15",TRUE,"456123");
-VALUES ("567891234","Maria Oliveira","1982-08-22",TRUE,"561234");
-VALUES ("678912345","Carlos Santos","2000-12-01",TRUE,"561234");
-VALUES ("789123456","Ana Costa","1992-03-10",TRUE,"612345");
-VALUES ("891234567","Pedro Almeida","1960-07-25",TRUE,"123457");
-VALUES ("123456780","Rafael Mendes","1998-09-17",TRUE,"234571");
-VALUES ("234567801","Juliana Ribeiro","1967-04-03",TRUE,"345712");
-VALUES ("345678012","Bruno Carvalho","2001-11-28",TRUE,"457123");
-VALUES ("456780123","Fernanda Dias","1995-01-15",TRUE,"571234");
-VALUES ("917716737", "Ivo da Rodrigues", "1976-01-24", TRUE, "695623");
-VALUES ("621445376", "Anita Esteves", "1974-07-20", TRUE, "451431");
-VALUES ("952149249", "Helena Guerreiro", "1988-08-23", TRUE, "518343");
-VALUES ("171696152", "Gonçalo Batista", "1990-08-31", TRUE, "678691");
-VALUES ("461173781", "Íris Mendes", "1969-09-14", TRUE, "259159");
-VALUES ("584571174", "Eduarda Faria", "1976-12-02", TRUE, "123988");
-VALUES ("786248735", "Valentina do Martins", "1977-02-15", TRUE, "739171");
-VALUES ("497528742", "William Borges", "1980-09-25", TRUE, "455297");
-VALUES ("475272372", "Duarte Tavares-Borges", "1950-06-07", TRUE, "254462");
-VALUES ("265476152", "Miriam Alves", "1966-06-19", TRUE, "346418");
-VALUES ("659739645", "Emma Borges", "1973-10-26", TRUE, "282493");
-VALUES ("547124286", "Vasco da Vicente", "1946-02-28", TRUE, "545776");
-VALUES ("347735776", "Enzo Tavares", "1945-11-11", TRUE, "523914");
-VALUES ("725851781", "Soraia Esteves", "1965-12-09", TRUE, "823927");
-VALUES ("684793125", "Ricardo da Barros", "1959-02-25", TRUE, "145431");
-VALUES ("538449913", "Débora Azevedo", "1995-06-06", TRUE, "117954");
-VALUES ("388232721", "Emília Matias", "2000-01-17", TRUE, "256944");
-VALUES ("825332531", "Caetana Matos", "1952-03-25", TRUE, "279416");
-VALUES ("439493593", "Íris-Constança Gomes", "1983-01-05", TRUE, "735899");
-VALUES ("171112126", "Victória Ferreira-Mota", "1971-10-20", TRUE, "446168");
-VALUES ("755319768", "Naiara-Marta Pires", "1977-05-16", TRUE, "163167");
-VALUES ("729882559", "Luca Pereira", "1954-08-01", TRUE, "471635");
-VALUES ("263468558", "Larissa Simões", "1963-12-15", TRUE, "527996");
-VALUES ("141896798", "Caetana Cunha", "1996-10-17", TRUE, "521233");
-VALUES ("237588789", "Larissa Fonseca", "1972-10-02", TRUE, "947456");
-VALUES ("932231265", "Noa Pinheiro", "1961-09-16", TRUE, "719364");
-VALUES ("815445454", "Wilson Batista", "1998-11-28", TRUE, "363399");
-VALUES ("871164622", "Anita Pinheiro", "1958-12-30", TRUE, "781933");
-VALUES ("789191959", "Tiago Moreira", "1952-07-19", TRUE, "633343");
-VALUES ("263355728", "Micael Nogueira", "1986-06-16", TRUE, "683812");
-VALUES ("312144685", "Isabel do Marques", "1981-04-13", TRUE, "583216");
-VALUES ("551265332", "Carolina-Francisca Rodrigues", "1968-01-18", TRUE, "454431");
-VALUES ("832259435", "Xavier da Machado", "1981-09-15", TRUE, "887862");
-VALUES ("927769156", "Gustavo Magalhães", "1984-09-11", TRUE, "315593");
-VALUES ("251322343", "Miriam Fonseca", "1968-10-22", TRUE, "686458");
-VALUES ("576853676", "Fernando Assunção", "1969-01-25", TRUE, "498964");
-VALUES ("627151891", "Núria-Yara Carneiro", "2006-09-11", TRUE, "872254");
-VALUES ("776412539", "Nádia Baptista", "1987-08-18", TRUE, "663878");
-
+VALUES ("123456789","André Cotrim","2005-03-20",1,"123456");
+VALUES ("234567891","João Marques","2005-04-19",1,"234561");
+VALUES ("345678912","Pedro Coelho","2004-05-19",1,"345612");
+VALUES ("456789123","João Silva","1990-05-15",1,"456123");
+VALUES ("567891234","Maria Oliveira","1982-08-22",1,"561234");
+VALUES ("678912345","Carlos Santos","2000-12-01",1,"561234");
+VALUES ("789123456","Ana Costa","1992-03-10",1,"612345");
+VALUES ("891234567","Pedro Almeida","1960-07-25",1,"123457");
+VALUES ("123456780","Rafael Mendes","1998-09-17",1,"234571");
+VALUES ("234567801","Juliana Ribeiro","1967-04-03",1,"345712");
+VALUES ("345678012","Bruno Carvalho","2001-11-28",1,"457123");
+VALUES ("456780123","Fernanda Dias","1995-01-15",1,"571234");
+VALUES ("917716737", "Ivo da Rodrigues", "1976-01-24", 1, "695623");
+VALUES ("621445376", "Anita Esteves", "1974-07-20", 1, "451431");
+VALUES ("952149249", "Helena Guerreiro", "1988-08-23", 1, "518343");
+VALUES ("171696152", "Gonçalo Batista", "1990-08-31", 1, "678691");
+VALUES ("461173781", "Íris Mendes", "1969-09-14", 1, "259159");
+VALUES ("584571174", "Eduarda Faria", "1976-12-02", 1, "123988");
+VALUES ("786248735", "Valentina do Martins", "1977-02-15", 1, "739171");
+VALUES ("497528742", "William Borges", "1980-09-25", 1, "455297");
+VALUES ("475272372", "Duarte Tavares-Borges", "1950-06-07", 1, "254462");
 
 INSERT INTO CLIENTE (Numero_CC, IBAN, NIF, Email, Numero_de_Telefone, Morada_de_Faturacao)  
 VALUES ("123456789", 'PT63064897173090956175368', '832224800', 'hsoares@example.net', '964 392 966', 'Praça da Quinta de Santo António, 66, 8448-514 Lagoa');
@@ -89,152 +59,79 @@ VALUES ("584571174", '315');
 VALUES ("786248735", '57');
 VALUES ("497528742", '374');
 VALUES ("475272372", '841');
-VALUES ("265476152", '66');
-VALUES ("659739645", '251');
-VALUES ("547124286", '250');
-VALUES ("347735776", '607');
-VALUES ("725851781", '849');
-VALUES ("684793125", '650');
-VALUES ("538449913", '513');
-VALUES ("388232721", '697');
-VALUES ("825332531", '315');
-VALUES ("439493593", '57');
-VALUES ("171112126", '374');
-VALUES ("755319768", '841');
-VALUES ("729882559", '66');
-VALUES ("263468558", '251');
-VALUES ("141896798", '250');
-VALUES ("237588789", '607');
-VALUES ("932231265", '849');
-VALUES ("815445454", '650');
-VALUES ("871164622", '513');
-VALUES ("789191959", '697');
-VALUES ("263355728", '315');
-VALUES ("312144685", '57');
-VALUES ("551265332", '374');
-VALUES ("832259435", '841');
-VALUES ("927769156", '66');
-VALUES ("251322343", '251');
-VALUES ("576853676", '250');
-VALUES ("627151891", '607');
-VALUES ("776412539", '849');
 
-INSERT INTO RESERVA (ID_da_Reserva,Data_de_Inicio,Data_de_Fim,Bagagem_Total)
-VALUES ("607", '2024-10-01', '2024-10-06', 3);
-VALUES ("849", '2024-01-31', '2024-02-02', 4);
-VALUES ("650", '2024-04-12', '2024-04-13', 1);
-VALUES ("513", '2024-07-31', '2024-08-07', 3);
-VALUES ("697", '2024-05-20', '2024-05-21', 2);
-VALUES ("315", '2024-06-26', '2024-07-08', 4);
-VALUES ("57", '2024-07-09', '2024-07-13', 2);
-VALUES ("374", '2024-08-16', '2024-08-24', 1);
-VALUES ("841", '2024-03-14', '2024-03-22', 3);
-VALUES ("66", '2024-09-17', '2024-09-29', 3);
-VALUES ("251", '2024-02-12', '2024-02-26', 1);
-VALUES ("250", '2024-02-11', '2024-02-25', 2);
+INSERT INTO RESERVA (ID_da_Reserva,Data_de_Inicio,Data_de_Fim,Bagagem_Total, ID_da_Rota)
+VALUES ("607", '2024-10-01', '2024-10-06', 3,'601a5df6-ac8a-4791-b08a-579cd57f5107');
+VALUES ("849", '2024-01-31', '2024-02-02', 4,'71cd0b80-1ba8-4a68-a411-4d97fb664e0c');
+VALUES ("650", '2024-04-12', '2024-04-13', 1,'3e647c62-d449-4755-b702-7bb71cd628d0');
+VALUES ("513", '2024-07-31', '2024-08-07', 3,'b5a486c1-6230-416f-ac46-102c949a8d0a');
+VALUES ("697", '2024-05-20', '2024-05-21', 2,'012db948-b26c-48b9-80f8-ebccb421fea6');
+VALUES ("315", '2024-06-26', '2024-07-08', 4,'bbae8c8a-80c7-4a7f-b623-20304b200f75');
+VALUES ("57", '2024-07-09', '2024-07-13', 2,'fb65fb58-9145-4fd3-bede-0622afb495d4');
+VALUES ("374", '2024-08-16', '2024-08-24', 1,'d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1');
+VALUES ("841", '2024-03-14', '2024-03-22', 3,'b3098e9e-5ebc-4553-a2dd-0c2619807aed');
+VALUES ("66", '2024-09-17', '2024-09-29', 3,'c464f144-56d8-4af0-a340-ecb90511153e');
+VALUES ("251", '2024-02-12', '2024-02-26', 1,'92752d3f-b8eb-4c5d-9e82-f2f1d7653826');
+VALUES ("250", '2024-02-11', '2024-02-25', 2,'8c52c7e1-3f1b-4f3a-afc5-de309a261750');
+--confirmar id da rota com id da reserva
 
-INSERT INTO AQUISICAO(Numero_CC,ID_da_Reserva,ID_Transacao,Data_de_Pagamento,Valor_Pago,Estado_de_Pagamento)
-VALUES ('123456789', '607', '850d1824', '2024-01-28', 313, False);
-VALUES ('234567891', '849', 'f6b784a0', '2024-01-24', 550, False);
-VALUES ('345678912', '650', '3a5b5b4b', '2024-01-03', 578, True);
-VALUES ('456789123', '513', '7956194f', '2024-01-02', 290, True);
-VALUES ('567891234', '697', '79d655c5', '2024-01-12', 199, True);
-VALUES ('678912345', '315', '3ecf6754', '2024-01-22', 667, True);
-VALUES ('789123456', '57', '4c7c1c60', '2024-01-29', 588, False);
-VALUES ('123456780', '374', 'c3955fcc', '2024-01-14', 550, False);
-VALUES ('234567801', '841', '8d8b4867', '2024-01-18', 790, False);
-VALUES ('345678012', '66', '8cc72823', '2024-01-11', 810, False);
-VALUES ('456780123', '251', '49b5fb0a', '2024-01-18', 116, False);
-VALUES ('891234567', '250', 'ad528ddb', '2024-01-25', 576, True);
+INSERT INTO AQUISICAO(ID_Transacao,Numero_CC,ID_da_Reserva,Data_de_Pagamento,Valor_Pago,Estado_de_Pagamento)
+VALUES ('850d1824', '123456789', '607', '2024-01-28', 313, 2);
+VALUES ('f6b784a0', '234567891', '849', '2024-01-24', 550, 2);
+VALUES ('3a5b5b4b', '345678912', '650', '2024-01-03', 578, 1);
+VALUES ('7956194f', '456789123', '513', '2024-01-02', 290, 1);
+VALUES ('79d655c5', '567891234', '697', '2024-01-12', 199, 1);
+VALUES ('3ecf6754', '678912345', '315', '2024-01-22', 667, 1);
+VALUES ('4c7c1c60', '789123456', '57', '2024-01-29', 588, 2);
+VALUES ('c3955fcc', '123456780', '374', '2024-01-14', 550, 2);
+VALUES ('8d8b4867', '234567801', '841', '2024-01-18', 790, 2);
+VALUES ('8cc72823', '345678012', '66', '2024-01-11', 810, 2);
+VALUES ('49b5fb0a', '456780123', '251', '2024-01-18', 116, 2);
+VALUES ('ad528ddb', '891234567', '250', '2024-01-25', 576, 1);
 
+INSERT INTO ALOJAMENTO(ID_de_Alojamento,Endereco, Cidade, Check_in, Check_out, Numero_de_Quartos, Numero_de_Telefone, Avaliacao)
+VALUES ('ALJ-20241130-001','45658 Harold Orchard, North Susanfort, WA 88348', 'Davisbury', '2024-08-23', '2024-09-04', 4, 920348695, 1.8);
+VALUES ('ALJ-20241130-002','2680 Mclean Lodge Apt. 345, Carrollfurt, HI 08331', 'Lake Lori', '2024-02-15', '2024-02-21', 9, 919719723, 3.4);
+VALUES ('ALJ-20241130-003','8004 Nicholas Trail Apt. 697, Whiteheadhaven, CO 54887', 'West Daniel', '2024-11-24', '2024-12-04', 4, 916225230, 4.7);
+VALUES ('ALJ-20241130-004','Unit 0409 Box 1737, DPO AE 49824', 'South Deantown', '2024-01-18', '2024-05-04', 3, 941761942, 2.9);
+VALUES ('ALJ-20241130-005','7606 Briana Station, Port Teresa, ID 73050', 'North Ashley', '2024-05-10', '2024-09-20', 2, 968199306, 3.6);
+VALUES ('ALJ-20241130-0012','286 Hoover Dam Suite 202, Lake Andrew, LA 16328', 'South Adamburgh', '2024-06-29', '2024-08-29', 5, 936801637, 4.5);
+VALUES ('ALJ-20241130-006','0612 Mark Well Suite 989, Ramirezfort, GA 75941', 'Port Brentberg', '2024-01-06', '2024-09-15', 6, 910979785, 4.2);
+VALUES ('ALJ-20241130-007','561 Arellano Court, North Matthewview, MP 56770', 'Christinastad', '2024-10-16', '2024-11-06', 8, 952347133, 3.9);
+VALUES ('ALJ-20241130-008','02526 Michelle Pine Apt. 918, East Patrick, GA 53642', 'New Sara', '2024-11-18', '2024-12-06', 8, 931976048, 3.6);
+VALUES ('ALJ-20241130-009','51184 Brown Path Apt. 764, West Gregoryview, WI 97052', 'Garciaside', '2024-05-17', '2024-06-28', 2, 936869602, 3.1);
+VALUES ('ALJ-20241130-010','694 Justin Wall Apt. 367, West Luishaven, IL 67101', 'Port Georgeland', '2024-03-17', '2024-09-17', 5, 941013361, 1.5);
+VALUES ('ALJ-20241130-011','92700 Casey Plain, Steelemouth, AK 53469', 'East Aprilside', '2024-09-30', '2024-10-25', 10, 935705920, 1.3);
 
-INSERT INTO ALOJAMENTO(Endereco, Cidade, Check_in, Check_out, Numero_de_Quartos, Numero_de_Telefone, Avaliacao)
-VALUES 
-('45658 Harold Orchard, North Susanfort, WA 88348', 'Davisbury', '2024-08-23', '2024-09-04', 4, 920348695, 1.8);
-('2680 Mclean Lodge Apt. 345, Carrollfurt, HI 08331', 'Lake Lori', '2024-02-15', '2024-02-21', 9, 919719723, 3.4);
-('8004 Nicholas Trail Apt. 697, Whiteheadhaven, CO 54887', 'West Daniel', '2024-11-24', '2024-12-04', 4, 916225230, 4.7);
-('Unit 0409 Box 1737, DPO AE 49824', 'South Deantown', '2024-01-18', '2024-05-04', 3, 941761942, 2.9);
-('7606 Briana Station, Port Teresa, ID 73050', 'North Ashley', '2024-05-10', '2024-09-20', 2, 968199306, 3.6);
-('286 Hoover Dam Suite 202, Lake Andrew, LA 16328', 'South Adamburgh', '2024-06-29', '2024-08-29', 5, 936801637, 4.5);
-('0612 Mark Well Suite 989, Ramirezfort, GA 75941', 'Port Brentberg', '2024-01-06', '2024-09-15', 6, 910979785, 4.2);
-('561 Arellano Court, North Matthewview, MP 56770', 'Christinastad', '2024-10-16', '2024-11-06', 8, 952347133, 3.9);
-('02526 Michelle Pine Apt. 918, East Patrick, GA 53642', 'New Sara', '2024-11-18', '2024-12-06', 8, 931976048, 3.6);
-('51184 Brown Path Apt. 764, West Gregoryview, WI 97052', 'Garciaside', '2024-05-17', '2024-06-28', 2, 936869602, 3.1);
-('694 Justin Wall Apt. 367, West Luishaven, IL 67101', 'Port Georgeland', '2024-03-17', '2024-09-17', 5, 941013361, 1.5);
-('92700 Casey Plain, Steelemouth, AK 53469', 'East Aprilside', '2024-09-30', '2024-10-25', 10, 935705920, 1.3);
+INSERT INTO TOUR (ID_de_Tour,Programa, Cidade, ID_Guia)
+VALUES ('TOUR-20241130-001','01', 'Rome', 'GUIDE005');
+VALUES ('TOUR-20241130-002','02', 'Rio de Janeiro', 'GUIDE010');
+VALUES ('TOUR-20241130-003','03', 'London', 'GUIDE006');
+VALUES ('TOUR-20241130-004','04', 'Barcelona', 'GUIDE011');
+VALUES ('TOUR-20241130-005','05', 'Rome', 'GUIDE009');
+VALUES ('TOUR-20241130-006','06', 'New York', 'GUIDE012');
+VALUES ('TOUR-20241130-007','07', 'Berlin', 'GUIDE009');
+VALUES ('TOUR-20241130-008','08','Los Angeles', 'GUIDE011');
+VALUES ('TOUR-20241130-009','09','Singapore', 'GUIDE005');
+VALUES ('TOUR-20241130-010','10','Amsterdam', 'GUIDE005');
+VALUES ('TOUR-20241130-011','11','Sydney', 'GUIDE011');
+VALUES ('TOUR-20241130-012','12','Paris', 'GUIDE010');
+VALUES ('TOUR-20241130-013','13','Dubai', 'GUIDE019');
 
-INSERT INTO TOUR (Programa, Cidade, ID_Guia)
-VALUES ('01', 'Rome', 'GUIDE005');
-VALUES ('02', 'Rio de Janeiro', 'GUIDE010');
-VALUES ('03', 'London', 'GUIDE006');
-VALUES ('04', 'Barcelona', 'GUIDE011');
-VALUES ('05', 'Rome', 'GUIDE009');
-VALUES ('06', 'New York', 'GUIDE012');
-VALUES ('07', 'Rome', 'GUIDE009');
-VALUES ('08','Madrid', 'GUIDE011');
-VALUES ('09','Tokyo', 'GUIDE005');
-VALUES ('10','Amsterdam', 'GUIDE005');
-VALUES ('11','Sydney', 'GUIDE011');
-VALUES ('12','Amsterdam', 'GUIDE010');
 --verificar tour com as cidades 
-
-INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia Aerea, Capacidade, Ano_de_Producao)
-VALUES (2024, 'Boeing 737', 'TAP Air Portugal', 180, 2016);
-VALUES (2023, 'Boeing 747', 'British Airways', 410, 2004);
-VALUES (2022, 'Boeing 767', 'Lufthansa', 250, 1990);
-VALUES (2021, 'Boeing 777', 'Qatar Airways', 350, 1980),
-VALUES (2020, 'Boeing 787 Dreamliner', 'Singapore Airlines', 296, 1986);
-VALUES (2019, 'Airbus A320', 'Ryanair', 190, 2018);
-VALUES (2018, 'Airbus A330', 'Air France', 250, 1981);
-VALUES (2017, 'Airbus A350', 'Emirates', 280, 1987);
-VALUES (2016, 'Airbus A380', 'Qantas Airways', 550, 1993);
-VALUES (2015, 'Embraer E-Jet E2', 'Azul Linhas Aéreas', 120, 1999);
-VALUES (2014, 'Bombardier CRJ Series', 'Delta Airlines', 100, 1975);
-VALUES (2013, 'McDonnell Douglas MD-80', 'American Airlines', 155, 1998);
-
-INSERT INTO RESERVA_DE_TOUR(ID_da_Reserva,Programa)
-VALUES ("607", );
-VALUES ("849",);
-VALUES ("650", );
-VALUES ("513", );
-VALUES ("697", );
-VALUES ("315", );
-VALUES ("57", );
-VALUES ("374", );
-VALUES ("841", );
-VALUES ("66", );
-VALUES ("251", );
-VALUES ("250", );
-
-INSERT INTO RESERVA_DE_ALOJAMENTO(ID_da_Reserva,ID_do_Alojamento)
-VALUES ("607", );
-VALUES ("849",);
-VALUES ("650", );
-VALUES ("513", );
-VALUES ("697", );
-VALUES ("315", );
-VALUES ("57", );
-VALUES ("374", );
-VALUES ("841", );
-VALUES ("66", );
-VALUES ("251", );
-VALUES ("250", );
-
-INSERT INTO ORIENTACAO(Programa,ID_Diploma_de_Turismo)
-
-INSERT INTO VIAGEM(ID_da_Rota, Estado_da_Viagem, Hora_de_Embarque, Hora_de_Chegada, Cidade_de_Embarque, Cidade_de_Chegada)
-VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0', True, '09:21:00', '11:21:00', 'London', 'Dubai');
-VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75', False, '15:08:00', '18:03:00', 'London', 'Singapore');
-VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', False, '12:28:00', '14:28:00', 'Sigapore', 'London');
-VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', False, '01:10:00', '03:10:00', 'London', 'Paris');
-VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', False, '03:59:00', '06:59:00', 'Sydney', 'Paris');
-VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', False, '19:27:00', '21:27:00', 'New York', 'Rio de Janeiro');
-VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', True, '01:30:00', '06:41:00', 'Berlin', 'Paris');
-VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', False, '22:48:00', '23:48:00', 'Rome', 'Berlin');
-VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', True, '15:31:00', '22:11:00', 'Rio de Janeiro', 'Sydney');
-VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', True, '17:59:00', '18:59:00', 'Rio de Janeiro', 'Los Angeles');
-VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', True, '05:05:00', '16:04:00', 'Paris', 'Los Angeles');
-VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', True, '04:28:00', '21:00:00', 'Barcelona', 'New York');
+INSERT INTO VIAGEM(ID_da_Rota, Estado_da_Viagem, Hora_de_Embarque, Hora_de_Chegada, Cidade_de_Embarque, Cidade_de_Chegada, ID_Aviao)
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', 1, '09:21:00', '11:21:00', 'London', 'Dubai',204);
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 2, '15:08:00', '18:03:00', 'London', 'Singapore',2023);
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0', 2, '12:28:00', '14:28:00', 'Singapore', 'London',2022);
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', 2, '01:10:00', '03:10:00', 'London', 'Paris',2021);
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', 2, '03:59:00', '06:59:00', 'Sydney', 'Paris',2020);
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75', 2, '19:27:00', '21:27:00', 'New York', 'Rio de Janeiro',2019);      
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', 1, '01:30:00', '06:41:00', 'Berlin', 'Paris',2018);
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 2, '22:48:00', '23:48:00', 'Rome', 'Berlin',2017);
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 1, '15:31:00', '22:11:00', 'Rio de Janeiro', 'Sydney',2016);
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 1, '17:59:00', '18:59:00', 'Rio de Janeiro', 'Los Angeles',2015);
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 1, '05:05:00', '16:04:00', 'Paris', 'Los Angeles',2014,2013);
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 1, '04:28:00', '21:00:00', 'Barcelona', 'New York');
 
 INSERT INTO ROTA(ID_da_Rota, Aeroporto_Partida, Aeroporto_Chegada, Hora_de_Embarque, Hora_de_Chegada)
 VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0', 'LHR', 'DXB', '07:24:00', '09:21:00');
@@ -249,20 +146,21 @@ VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 'GIG', 'SYD', '03:28:41', '17:02
 VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 'GIG', 'LAX', '06:38:51', '10:10:59');
 VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'CDG', 'LAX', '20:42:37', '23:09:05');
 VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'BCN', 'JFK', '23:16:27', '17:29:42');
+--confirmar as horas e johny responder
 
-INSERT INTO AEROPORTO (Nome_do_Aeroporto, Porta_de_Embarque, Cidade)
-VALUES ('LHR', 41, 'London');
-VALUES ('DXB', 34, 'Dubai');
-VALUES ('SIN', 21, 'Singapore');
-VALUES ('CDG', 49, 'Paris');
-VALUES ('MAD', 4, 'Madrid');
-VALUES ('SYD', 5, 'Sydney');
-VALUES ('JFK', 24, 'New York');
-VALUES ('TXL', 40, 'Berlin');
-VALUES ('GIG', 4, 'Rio de Janeiro');
-VALUES ('BCN', 13, 'Barcelona');
-VALUES ('FCO', 37, 'Rome');
-VALUES ('LAX', 9, 'Los Angeles');
+INSERT INTO AEROPORTO (ID_de_Aeroporto,Nome_do_Aeroporto, Porta_de_Embarque, Cidade)
+VALUES ('1','LHR', 41, 'London');
+VALUES ('2','DXB', 34, 'Dubai');
+VALUES ('3','SIN', 21, 'Singapore');
+VALUES ('4','CDG', 49, 'Paris');
+VALUES ('5','MAD', 4, 'Madrid');
+VALUES ('6','SYD', 5, 'Sydney');
+VALUES ('7','JFK', 24, 'New York');
+VALUES ('8','TXL', 40, 'Berlin');
+VALUES ('9','GIG', 4, 'Rio de Janeiro');
+VALUES ('10','BCN', 13, 'Barcelona');
+VALUES ('11','FCO', 37, 'Rome');
+VALUES ('12','LAX', 9, 'Los Angeles');
 
 INSERT INTO CIDADE (Nome,Regiao,Pais)
 VALUES ('London', 'Inglaterra', 'Reino Unido');
@@ -277,7 +175,7 @@ VALUES ('Rio de Janeiro', 'Rio de Janeiro', 'Brasil');
 VALUES ('Barcelona', 'Catalunha', 'Espanha');
 VALUES ('Rome', 'Lazio', 'Itália');
 VALUES ('Los Angeles', 'Califórnia', 'Estados Unidos');
---rever 
+--rever JOHNY
 
 INSERT INTO FUNCIONARIO (ID_Funcionario, Nome, Anos_de_Serviço, Salário, Numero_de_Telefone, Email, NIF, IBAN)
 VALUES ('3195c0ba-ac5d-4aa7-840d-9c855d6ba85b', 'César Campos', 11, '€44462', '969024279', 'tomasandrade@example.org', '507995843', 'PT95333388154013248983692');
@@ -358,3 +256,145 @@ VALUES ('208a57af-19a2-4d1c-8a0f-260e4c294db9', 'licensa-6014');
 VALUES ('5894efb5-74bc-4c43-a489-d4e97eb75b4e', 'licensa-3232');
 VALUES ('297f8ebd-abd2-4c7b-a36a-4e821d761f2f', 'licensa-9572');
 VALUES ('520eb888-6ade-48fd-bf3d-39fc5423ddd1', 'licensa-6801');
+
+INSERT INTO HOSPEDEIRO_VIAGEM(ID_da_Rota,ID_Funcionario)
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0','802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0','839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0','e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0','ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('3e647c62-d449-4755-b702-7bb71cd628d0','8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75','90d9a2dd-6c2a-4b00-adb5-976d80c1ff57');
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75','477a0f82-f5fa-4dcc-9e94-a2cd3ab0525d');
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75','2deda703-117a-4cd4-85ff-77c13ae93687');
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75','9982df07-9a39-4a19-a11e-48ae76aaf293');
+VALUES ('bbae8c8a-80c7-4a7f-b623-20304b200f75','2e0d3ea9-8f6d-446c-83d1-bd5f5e15827a');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107','75b2a87a-303c-47e2-afe8-00a8782b4b35');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107','e4c579a6-86a7-47cd-8984-fbdda06fa08e');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '802a0a98-11d7-4a2d-8164-0822459229e1');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '839dbb00-4aad-4e31-9910-08c9f7734e51');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'e9444ae5-402e-42ea-bb61-baf4cf9c4041');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'ef7b3a2b-8781-4437-9e7d-f45529c137ee');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '8a420b94-9149-4abd-beab-b6bc18ccab9d');
+
+INSERT INTO PILOTO_VIAGEM(ID_da_Rota,ID_Funcionario)
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('601a5df6-ac8a-4791-b08a-579cd57f5107', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('b5a486c1-6230-416f-ac46-102c949a8d0a', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('012db948-b26c-48b9-80f8-ebccb421fea6', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('fb65fb58-9145-4fd3-bede-0622afb495d4', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('c464f144-56d8-4af0-a340-ecb90511153e', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '9dfba68b-e41f-4be5-b26a-86dcc03a8aa5');
+VALUES ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 'a08a57e0-3ba0-48bb-9c11-c9396f896d57');
+
+INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia Aerea, Capacidade, Ano_de_Producao)
+VALUES (2024, 'Boeing 737', 'TAP Air Portugal', 180, 2016);
+VALUES (2023, 'Boeing 747', 'British Airways', 410, 2004);
+VALUES (2022, 'Boeing 767', 'Lufthansa', 250, 1990);
+VALUES (2021, 'Boeing 777', 'Qatar Airways', 350, 1980),
+VALUES (2020, 'Boeing 787 Dreamliner', 'Singapore Airlines', 296, 1986);
+VALUES (2019, 'Airbus A320', 'Ryanair', 190, 2018);
+VALUES (2018, 'Airbus A330', 'Air France', 250, 1981);
+VALUES (2017, 'Airbus A350', 'Emirates', 280, 1987);
+VALUES (2016, 'Airbus A380', 'Qantas Airways', 550, 1993);
+VALUES (2015, 'Embraer E-Jet E2', 'Azul Linhas Aéreas', 120, 1999);
+VALUES (2014, 'Bombardier CRJ Series', 'Delta Airlines', 100, 1975);
+VALUES (2013, 'McDonnell Douglas MD-80', 'American Airlines', 155, 1998);
+
+INSERT INTO RESERVA_DE_TOUR(ID_da_Reserva,ID_de_Tour)
+VALUES ("607", 'TOUR-20241130-013');
+VALUES ("849",'TOUR-20241130-009');
+VALUES ("650", 'TOUR-20241130-003');
+VALUES ("513", 'TOUR-20241130-012');
+VALUES ("697", 'TOUR-20241130-012');
+VALUES ("315", 'TOUR-20241130-002');
+VALUES ("57", 'TOUR-20241130-012');
+VALUES ("374", 'TOUR-20241130-007');
+VALUES ("841", 'TOUR-20241130-011');
+VALUES ("66", 'TOUR-20241130-008');
+VALUES ("251", 'TOUR-20241130-008');
+VALUES ("250", 'TOUR-20241130-006');
+
+INSERT INTO RESERVA_DE_ALOJAMENTO(ID_da_Reserva,ID_do_Alojamento)
+VALUES ("607", 'ALJ-20241130-001');
+VALUES ("849", 'ALJ-20241130-002');
+VALUES ("650", 'ALJ-20241130-003');
+VALUES ("513", 'ALJ-20241130-004');
+VALUES ("697", 'ALJ-20241130-005');
+VALUES ("315",'ALJ-20241130-012');
+VALUES ("57",'ALJ-20241130-006');
+VALUES ("374", 'ALJ-20241130-007');
+VALUES ("841", 'ALJ-20241130-008');
+VALUES ("66", 'ALJ-20241130-009');
+VALUES ("251", 'ALJ-20241130-010');
+VALUES ("250", 'ALJ-20241130-011');
+
+INSERT INTO ORIENTACAO(ID_de_Tour,ID_Funcionario)
+VALUES ('TOUR-20241130-013','3195c0ba-ac5d-4aa7-840d-9c855d6ba85b');
+VALUES ('TOUR-20241130-009','8b8daf39-19e7-4732-b003-cc71fb5a2fb4');
+VALUES ('TOUR-20241130-003','b6a0e394-b051-4608-bbaa-d4526840af0f');
+VALUES ('TOUR-20241130-012','d4290269-7b44-41e0-a36c-cbfda1bf1c1d');
+VALUES ('TOUR-20241130-012','431619cf-b487-4055-99ec-e0df66e5f347');
+VALUES ('TOUR-20241130-002','1db4c891-c05e-4039-be6c-90fb2ef181d9');
+VALUES ('TOUR-20241130-012','9cd57f6b-f52b-490c-8904-2296da4b4aa4');
+VALUES ('TOUR-20241130-007'),'e2c959da-f939-4c50-8b79-daefa5861597';
+VALUES ('TOUR-20241130-011','741dc207-6a48-473a-91af-0b6d431c2b78');
+VALUES ('TOUR-20241130-008','2bcc7ae4-cf19-4f7c-9ccf-dcfd10d463f2');
+VALUES ('TOUR-20241130-008','c82c0a78-6d3b-4197-9bf8-36a6823760a8');
+VALUES ('TOUR-20241130-006','f936708a-44be-4834-9909-470e7ca85e23');
