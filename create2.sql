@@ -76,7 +76,7 @@ CREATE TABLE VIAGEM(
 
 DROP TABLE IF EXISTS ROTA;
 CREATE TABLE ROTA(
-    ID_Voo INT PRIMARY KEY,
+    ID_Voo INTEGER PRIMARY KEY,
     ID_da_Rota TEXT,
     Aeroporto_de_Partida TEXT,
     Aeroporto_de_Chegada TEXT,
