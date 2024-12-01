@@ -41,9 +41,9 @@ VALUES
 
 INSERT INTO CIDADE (Nome, Regiao, Pais)
 VALUES
-    ('London', 'Inglaterra', 'Reino Unido'),
-    ('Dubai', 'Emirados Árabes Unidos', 'Emirados Árabes Unidos'),
-    ('Singapore', 'Sudeste Asiático', 'Singapura'),
+    ('London', 'Londres', 'Reino Unido'),
+    ('Dubai', 'Dubai', 'Emirados Árabes Unidos'),
+    ('Singapore', 'Singapura', 'Singapura'),
     ('Paris', 'Île-de-France', 'França'),
     ('Madrid', 'Madrid', 'Espanha'),
     ('Sydney', 'Nova Gales do Sul', 'Austrália'),
@@ -53,8 +53,7 @@ VALUES
     ('Barcelona', 'Catalunha', 'Espanha'),
     ('Rome', 'Lazio', 'Itália'),
     ('Los Angeles', 'Califórnia', 'Estados Unidos'),
-    ('Amsterdam', 'Países Baixos', 'Países Baixos');
-    --rever JOHNY
+    ('Amsterdam', 'Holanda do Norte', 'Países Baixos');
 
 INSERT INTO AVIAO (ID_Aviao, Modelo, Companhia_Aerea, Capacidade, Ano_de_Producao)
 VALUES 
@@ -104,33 +103,28 @@ VALUES
 INSERT INTO VIAGEM (ID_da_Rota, Estado_da_Viagem, Hora_de_Embarque, Hora_de_Chegada, Cidade_de_Embarque, Cidade_de_Chegada, ID_Aviao)
 VALUES
     ('601a5df6-ac8a-4791-b08a-579cd57f5107', 1, '09:21:00', '11:21:00', 'London', 'Dubai', 2024),
-    ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 2, '15:08:00', '18:03:00', 'London', 'Singapore', 2023),
-    ('3e647c62-d449-4755-b702-7bb71cd628d0', 2, '12:28:00', '14:28:00', 'Singapore', 'London', 2022),
-    ('b5a486c1-6230-416f-ac46-102c949a8d0a', 2, '01:10:00', '03:10:00', 'London', 'Paris', 2021),
-    ('012db948-b26c-48b9-80f8-ebccb421fea6', 2, '03:59:00', '06:59:00', 'Sydney', 'Paris', 2020),
-    ('bbae8c8a-80c7-4a7f-b623-20304b200f75', 2, '19:27:00', '21:27:00', 'New York', 'Rio de Janeiro', 2019),
+    ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', 1, '15:08:00', '18:03:00', 'London', 'Singapore', 2023),
+    ('3e647c62-d449-4755-b702-7bb71cd628d0', 1, '12:28:00', '14:28:00', 'Singapore', 'London', 2022),
+    ('b5a486c1-6230-416f-ac46-102c949a8d0a', 1, '01:10:00', '03:10:00', 'London', 'Paris', 2021),
+    ('012db948-b26c-48b9-80f8-ebccb421fea6', 1, '03:59:00', '06:59:00', 'Sydney', 'Paris', 2020),
+    ('bbae8c8a-80c7-4a7f-b623-20304b200f75', 1, '19:27:00', '21:27:00', 'New York', 'Rio de Janeiro', 2019),
     ('fb65fb58-9145-4fd3-bede-0622afb495d4', 1, '01:30:00', '06:41:00', 'Berlin', 'Paris', 2018),
-    ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 2, '22:48:00', '23:48:00', 'Rome', 'Berlin', 2017),
+    ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', 1, '22:48:00', '23:48:00', 'Rome', 'Berlin', 2017),
     ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', 1, '15:31:00', '22:11:00', 'Rio de Janeiro', 'Sydney', 2016),
     ('c464f144-56d8-4af0-a340-ecb90511153e', 1, '17:59:00', '18:59:00', 'Rio de Janeiro', 'Los Angeles', 2015),
-    ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', 1, '05:05:00', '16:04:00', 'Paris', 'Los Angeles', 2014),
-    ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', 1, '04:28:00', '21:00:00', 'Barcelona', 'New York', 2013);
 
-INSERT INTO ROTA (ID_da_Rota, Aeroporto_de_Partida, Aeroporto_de_Chegada, Hora_de_Partida, Hora_de_Chegada)
+INSERT INTO ROTA (ID_da_Escala,ID_da_Rota, Aeroporto_de_Partida, Aeroporto_de_Chegada, Hora_de_Partida, Hora_de_Chegada)
 VALUES
-    ('3e647c62-d449-4755-b702-7bb71cd628d0', '1', '2', '07:24:00', '09:21:00'),
-    ('bbae8c8a-80c7-4a7f-b623-20304b200f75', '1', '3', '10:36:42', '13:53:00'),
-    ('601a5df6-ac8a-4791-b08a-579cd57f5107', '3', '1', '02:05:59', '08:49:41'),
-    ('b5a486c1-6230-416f-ac46-102c949a8d0a', '2', '4', '07:50:12', '12:29:13'),
-    ('012db948-b26c-48b9-80f8-ebccb421fea6', '6', '4', '16:11:17', '18:45:29'),
-    ('71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '7', '9', '14:56:58', '16:54:36'),
-    ('fb65fb58-9145-4fd3-bede-0622afb495d4', '8', '4', '17:20:13', '18:41:55'),
-    ('d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '11', '8', '11:21:20', '12:27:47'),
-    ('b3098e9e-5ebc-4553-a2dd-0c2619807aed', '9', '6', '03:28:41', '17:02:16'),
-    ('c464f144-56d8-4af0-a340-ecb90511153e', '9', '12', '06:38:51', '10:10:59'),
-    ('92752d3f-b8eb-4c5d-9e82-f2f1d7653826', '4', '12', '20:42:37', '23:09:05'),
-    ('8c52c7e1-3f1b-4f3a-afc5-de309a261750', '10', '7', '13:16:27', '17:29:42');
---confirmar as horas e johny responder
+    (1,'3e647c62-d449-4755-b702-7bb71cd628d0', '1', '2', '07:24:00', '09:21:00'),
+    (2,'bbae8c8a-80c7-4a7f-b623-20304b200f75', '1', '3', '10:36:42', '13:53:00'),
+    (3,'601a5df6-ac8a-4791-b08a-579cd57f5107', '3', '1', '02:05:59', '08:49:41'),
+    (4,'b5a486c1-6230-416f-ac46-102c949a8d0a', '2', '4', '07:50:12', '12:29:13'),
+    (5,'012db948-b26c-48b9-80f8-ebccb421fea6', '6', '4', '16:11:17', '18:45:29'),
+    (6,'71cd0b80-1ba8-4a68-a411-4d97fb664e0c', '7', '9', '14:56:58', '16:54:36'),
+    (7,'fb65fb58-9145-4fd3-bede-0622afb495d4', '8', '4', '17:20:13', '18:41:55'),
+    (8,'d851c3b9-958b-4fbd-a52e-aaff4d0d4cd1', '11', '8', '11:21:20', '12:27:47'),
+    (9,'b3098e9e-5ebc-4553-a2dd-0c2619807aed', '9', '6', '03:28:41', '17:02:16'),
+    (10,'c464f144-56d8-4af0-a340-ecb90511153e', '9', '12', '06:38:51', '10:10:59');
 
 INSERT INTO RESERVA (ID_da_Reserva, Data_de_Inicio, Data_de_Fim, Bagagem_Total, ID_da_Rota)
 VALUES 
@@ -255,8 +249,6 @@ VALUES
     ('TOUR-20241130-010', '10', 'Amsterdam', '3195c0ba-ac5d-4aa7-840d-9c855d6ba85b'),
     ('TOUR-20241130-011', '11', 'Sydney','741dc207-6a48-473a-91af-0b6d431c2b78'),
     ('TOUR-20241130-012', '12', 'Paris', '431619cf-b487-4055-99ec-e0df66e5f347');
-
---verificar tour com as cidades 
 
 INSERT INTO RESERVA_DE_TOUR (ID_da_Reserva, ID_de_Tour)
 VALUES 
