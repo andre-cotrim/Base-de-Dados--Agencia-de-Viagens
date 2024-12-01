@@ -76,7 +76,7 @@ CREATE TABLE VIAGEM(
 
 DROP TABLE IF EXISTS ROTA;
 CREATE TABLE ROTA(
-    ID_da_Escala INT PRIMARY KEY,
+    ID_Voo INT PRIMARY KEY,
     ID_da_Rota TEXT,
     Aeroporto_de_Partida TEXT,
     Aeroporto_de_Chegada TEXT,
@@ -95,7 +95,7 @@ CREATE TABLE RESERVA(
     Data_de_Fim DATE NOT NULL,
     Bagagem_Total INTEGER NOT NULL CHECK(Bagagem_Total>=0),
     ID_da_Rota TEXT NOT NULL,
-    FOREIGN KEY (ID_da_Rota) REFERENCES ROTA(ID_da_Rota) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (ID_da_Rota) REFERENCES VIAGEM(ID_da_Rota) ON DELETE CASCADE ON UPDATE CASCADE,
     CHECK (Data_de_Fim>Data_de_Inicio)
 );
 SELECT ID_da_Reserva, Data_de_Inicio,Data_de_Fim, (JULIANDAY(Data_de_Fim)-JULIANDAY(Data_de_Inicio)) AS DIAS FROM RESERVA;
